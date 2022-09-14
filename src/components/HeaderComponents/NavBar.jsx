@@ -42,7 +42,7 @@ function NavBar() {
         <Box component={Hidden} xsDown>
           <Box>
             {navItems.map((item, i) => (
-              <Button className={classes.NavLinks}>{item.lable}</Button>
+              <Button color="inherit">{item.lable}</Button>
             ))}
           </Box>
         </Box>

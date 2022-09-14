@@ -3,6 +3,7 @@ import {Box, Typography} from '@material-ui/core'
 import {useStyles} from './HeaderStyles'
 import NavBar from './NavBar'
 import ArrowDownwardRoundedIcon from '@material-ui/icons/ArrowDownwardRounded'
+import {Decorator} from '../common/commonComponents'
 
 function HeadersComponents() {
   const classes = useStyles()
@@ -14,17 +15,15 @@ function HeadersComponents() {
           I'm a Webdeveloper, |
         </Typography>
         <Typography variant="h3" component="h4" className={classes.headerDesc}>
-          I create Website and Application, Based on Your Need...
+          I create Website and Application,
+          <br /> Based on Your Need...
         </Typography>
-
-        <Box className={classes.decorator}>
-          <Typography variant="span" className={classes.decoratorText}>
-            Contact Us
-          </Typography>
-          <Typography variant="span" className={classes.arrow}>
-            <ArrowDownwardRoundedIcon />
-          </Typography>
-        </Box>
+        {/* decorator */}
+        {Decorator({
+          lable: 'About Me',
+          withIcon: true,
+          icon: <ArrowDownwardRoundedIcon />,
+        })}
       </Box>
     </Box>
   )
